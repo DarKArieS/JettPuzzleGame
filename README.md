@@ -1,6 +1,12 @@
-# JettPuzzleGame
+# Jett好想玩 拼圖趣
 
 <img src="ReadMeGIF/20181220_110631.gif" width="200px"/>
+
+## Jett 好想玩 遊戲系列
+
+[Light-On](https://github.com/atyrcp/Light-On)
+
+[KeepShaking](https://github.com/Aria-Lee/KeepShaking)
 
 # 遊戲玩法
 
@@ -83,4 +89,17 @@ Jett有一天發現風景照都缺了一塊！
 
 - Score: 分數
 
+# 道具商店
+
+<img src="ReadMeGIF/Screenshot_20181220-115630.png" width="200px"/>
+
+輸入想購買的道具數量，然後點擊結帳。
+
+消費紀錄會顯示在 HISTORY介面
+
+# 消費紀錄
+
+<img src="ReadMeGIF/Screenshot_20181220-115911.png" width="200px"/>
+
+Jett系列遊戲的消費與儲值紀錄皆會在此顯示。
 
