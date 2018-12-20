@@ -31,7 +31,7 @@ class MemberFragment : Fragment() {
             if ((activity as MainActivity).apiToken!="" && !progressingBool){
                 autoLogin(view)
             }else{
-                Navigation.findNavController(view).navigate(R.id.action_memberFragment_to_loginFragment)
+                if(!progressingBool) Navigation.findNavController(view).navigate(R.id.action_memberFragment_to_loginFragment)
             }
         }
 
