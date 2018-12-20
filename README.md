@@ -18,8 +18,9 @@ Jett有一天發現風景照都缺了一塊！
 
 請先點選SIGN UP 註冊會員，依序填入名稱、Email、密碼、確認密碼
 
-<img src="ReadMeGIF/Screenshot_20181220-111835.png" width="200px"/>
-<img src="ReadMeGIF/Screenshot_20181220-112000.png" width="200px"/>
+
+|<img src="ReadMeGIF/Screenshot_20181220-111835.png" width="200px"/>|<img src="ReadMeGIF/Screenshot_20181220-112000.png" width="200px"/>|
+|-----|---------|
 
 點選 LOG IN，填寫Email與密碼登入遊戲
 
