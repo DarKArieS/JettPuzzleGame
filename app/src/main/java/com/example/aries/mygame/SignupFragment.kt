@@ -111,7 +111,7 @@ class SignupFragment : Fragment() {
         val jSON = MediaType.get("application/json")
         val requestBody : RequestBody = RequestBody.create(jSON,myBodyJson)
 
-        val request = Request.Builder().url(resources.getString(R.string.URL) +"/api/register")
+        val request = Request.Builder().url(resources.getString(R.string.URL) +"api/register")
             .addHeader("Content-Type", "application/json")
             .addHeader("Accept", "application/json")
             .post(requestBody)

@@ -135,6 +135,11 @@ class GameFragment : Fragment(),ImageProvider, TimesUp {
             ansButtonClick()
         }
 
+        if((activity as MainActivity).itemChooseArray[0]) binding.gameItemImageView.alpha = 1f
+        if((activity as MainActivity).itemChooseArray[1]) binding.gameItemImageView2.alpha = 1f
+        if((activity as MainActivity).itemChooseArray[2]) binding.gameItemImageView3.alpha = 1f
+        if((activity as MainActivity).itemChooseArray[3]) binding.gameItemImageView4.alpha = 1f
+
         binding.checkBox1.setOnClickListener { view:View->
             //println(binding.checkBox1.isChecked)
             if(binding.checkBox1.isChecked){

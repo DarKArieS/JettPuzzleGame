@@ -8,6 +8,35 @@
 
         <!-- TODO: Update blank fragment layout -->
 
+        <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp" app:srcCompat="@drawable/clock"
+                android:id="@+id/gameItemImageView"
+                android:alpha="0.2"
+                app:layout_constraintBottom_toTopOf="@+id/timeTextView" app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintHorizontal_bias="0.38" app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginBottom="8dp"/>
+        <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp" app:srcCompat="@drawable/shield"
+                android:id="@+id/gameItemImageView2"
+                android:alpha="0.2"
+                app:layout_constraintStart_toEndOf="@+id/gameItemImageView" android:layout_marginStart="4dp"
+                app:layout_constraintTop_toTopOf="@+id/gameItemImageView"/>
+        <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp" app:srcCompat="@drawable/relic"
+                android:id="@+id/gameItemImageView3"
+                android:alpha="0.2"
+                app:layout_constraintStart_toEndOf="@+id/gameItemImageView2" android:layout_marginStart="4dp"
+                app:layout_constraintTop_toTopOf="@+id/gameItemImageView"/>
+        <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp" app:srcCompat="@drawable/glasses"
+                android:id="@+id/gameItemImageView4"
+                android:alpha="0.2"
+                app:layout_constraintStart_toEndOf="@+id/gameItemImageView3" android:layout_marginStart="4dp"
+                app:layout_constraintTop_toTopOf="@+id/gameItemImageView"/>
         <TextView
                 android:text="30"
                 android:layout_width="wrap_content"
