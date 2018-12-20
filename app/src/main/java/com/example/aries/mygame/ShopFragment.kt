@@ -21,7 +21,7 @@ import java.io.IOException
 class ShopFragment : Fragment() {
 
     private lateinit var binding: FragmentShopBinding
-    private val price = intArrayOf(1, 1, 1, 1)
+    private val price = intArrayOf(20, 20, 20, 20)
     private var nWantedItem = IntArray(4){0}
     private var progressingBool = false
 //    private var completedRequestJson :MutableList<JSONObject> = mutableListOf()
