@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+    <android.support.constraint.ConstraintLayout
+                                                 android:layout_width="match_parent"
+                                                 android:layout_height="match_parent"
+                                                 tools:context=".AchievementFragment">
+
+        <!-- TODO: Update blank fragment layout -->
+
+        <TextView
+                android:text="成　就"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/achieveTitleTextView" android:textSize="36sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintHorizontal_bias="0.5" app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintVertical_bias="0.050000012"/>
+        <CheckBox
+                android:text="試水溫"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/achieveCheckBox1_1" android:clickable="false"
+                app:layout_constraintStart_toStartOf="@+id/commonAchieveTitleTextView" android:layout_marginStart="24dp"
+                android:layout_marginTop="16dp" app:layout_constraintTop_toBottomOf="@+id/commonAchieveTitleTextView"/>
+        <CheckBox
+                android:text="低消"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/achieveCheckBox1_6" android:clickable="false"
+                android:layout_marginTop="16dp"
+                app:layout_constraintTop_toBottomOf="@+id/commonAchieveTitleTextView"
+                app:layout_constraintStart_toEndOf="@+id/achieveCheckBox1_1"
+                app:layout_constraintEnd_toEndOf="parent"/>
+        <CheckBox
+                android:text="半張小朋友"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/achieveCheckBox1_7" android:clickable="false"
+                android:layout_marginTop="16dp"
+                app:layout_constraintTop_toBottomOf="@+id/achieveCheckBox1_6"
+                app:layout_constraintStart_toStartOf="@+id/achieveCheckBox1_6"/>
+        <CheckBox
+                android:text="好野人"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/achieveCheckBox1_8" android:clickable="false"
+                app:layout_constraintStart_toStartOf="@+id/achieveCheckBox1_6" android:layout_marginTop="16dp"
+                app:layout_constraintTop_toBottomOf="@+id/achieveCheckBox1_7"/>
+        <CheckBox
+                android:text="土豪"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/achieveCheckBox1_9" android:clickable="false"
+                app:layout_constraintStart_toStartOf="@+id/achieveCheckBox1_6" android:layout_marginTop="16dp"
+                app:layout_constraintTop_toBottomOf="@+id/achieveCheckBox1_8"/>
+        <CheckBox
+                android:text="新手"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/achieveCheckBox1_2" android:clickable="false"
+                app:layout_constraintStart_toStartOf="@+id/commonAchieveTitleTextView" android:layout_marginStart="24dp"
+                android:layout_marginTop="16dp" app:layout_constraintTop_toBottomOf="@+id/achieveCheckBox1_1"/>
+        <CheckBox
+                android:text="駕輕就熟"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/achieveCheckBox1_3" android:clickable="false"
+                app:layout_constraintStart_toStartOf="@+id/commonAchieveTitleTextView" android:layout_marginStart="24dp"
+                android:layout_marginTop="16dp" app:layout_constraintTop_toBottomOf="@+id/achieveCheckBox1_2"/>
+        <CheckBox
+                android:text="老手"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/achieveCheckBox1_4" android:clickable="false"
+                app:layout_constraintStart_toStartOf="@+id/commonAchieveTitleTextView" android:layout_marginStart="24dp"
+                android:layout_marginTop="16dp" app:layout_constraintTop_toBottomOf="@+id/achieveCheckBox1_3"/>
+        <CheckBox
+                android:text="遊戲成癮者"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/achieveCheckBox1_5" android:clickable="false"
+                app:layout_constraintStart_toStartOf="@+id/commonAchieveTitleTextView" android:layout_marginStart="24dp"
+                android:layout_marginTop="16dp" app:layout_constraintTop_toBottomOf="@+id/achieveCheckBox1_4"/>
+        <TextView
+                android:text="共同成就"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/commonAchieveTitleTextView" android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="0.05"
+                app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintVertical_bias="0.16000003"/>
+        <TextView
+                android:text="拼圖成就"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/privateAchieveTitleTextView" android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="0.05"
+                app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintVertical_bias="0.77"/>
+        <CheckBox
+                android:text="新手入門"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/achieveCheckBox2_1" android:layout_marginTop="16dp"
+                app:layout_constraintTop_toBottomOf="@+id/privateAchieveTitleTextView"
+                app:layout_constraintStart_toStartOf="@+id/privateAchieveTitleTextView"
+                android:layout_marginStart="24dp"
+                android:clickable="false"/>
+        <CheckBox
+                android:text="老鳥風範"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/achieveCheckBox2_3"
+                android:clickable="false"
+                app:layout_constraintStart_toStartOf="@+id/achieveCheckBox1_6" android:layout_marginTop="16dp"
+                app:layout_constraintTop_toBottomOf="@+id/privateAchieveTitleTextView"/>
+        <CheckBox
+                android:text="漸入佳境"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/achieveCheckBox2_2"
+                app:layout_constraintStart_toStartOf="@+id/privateAchieveTitleTextView"
+                android:layout_marginStart="24dp"
+                android:clickable="false" android:layout_marginTop="16dp"
+                app:layout_constraintTop_toBottomOf="@+id/achieveCheckBox2_1"/>
+        <CheckBox
+                android:text="隱士高人"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/achieveCheckBox2_4"
+                android:clickable="false"
+                android:layout_marginTop="16dp"
+                app:layout_constraintTop_toBottomOf="@+id/achieveCheckBox2_3"
+                app:layout_constraintStart_toStartOf="@+id/achieveCheckBox2_3"/>
+    </android.support.constraint.ConstraintLayout>
+</layout>

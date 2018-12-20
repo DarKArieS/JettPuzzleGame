@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools" android:id="@+id/main_navigation"
+            app:startDestination="@id/memberFragment">
+
+    <fragment android:id="@+id/gameTitle" android:name="com.example.aries.mygame.GameTitle"
+              android:label="fragment_game_title" tools:layout="@layout/fragment_game_title">
+        <action android:id="@+id/action_gameTitle_to_gameFragment" app:destination="@id/gameFragment"/>
+        <action android:id="@+id/action_gameTitle_to_accountFragment" app:destination="@id/accountFragment"/>
+        <action android:id="@+id/action_gameTitle_to_achievementFragment" app:destination="@id/achievementFragment"/>
+        <action android:id="@+id/action_gameTitle_to_loginFragment" app:destination="@id/loginFragment"
+                app:popUpTo="@+id/memberFragment"/>
+        <action android:id="@+id/action_gameTitle_to_shopFragment" app:destination="@id/shopFragment"/>
+        <action android:id="@+id/action_gameTitle_to_explainFragment" app:destination="@id/explainFragment"/>
+        <action android:id="@+id/action_gameTitle_to_explainAchieveFragment"
+                app:destination="@id/explainAchieveFragment"/>
+    </fragment>
+    <fragment android:id="@+id/gameFragment" android:name="com.example.aries.mygame.GameFragment"
+              android:label="fragment_game" tools:layout="@layout/fragment_game">
+        <action android:id="@+id/action_gameFragment_to_gameOverFragment" app:destination="@id/gameOverFragment"
+                app:popUpTo="@+id/gameTitle"/>
+    </fragment>
+    <fragment android:id="@+id/accountFragment" android:name="com.example.aries.mygame.AccountFragment"
+              android:label="fragment_account" tools:layout="@layout/fragment_account"/>
+    <fragment android:id="@+id/memberFragment" android:name="com.example.aries.mygame.MemberFragment"
+              android:label="fragment_member" tools:layout="@layout/fragment_member">
+        <action android:id="@+id/action_memberFragment_to_loginFragment" app:destination="@id/loginFragment"/>
+        <action android:id="@+id/action_memberFragment_to_signupFragment" app:destination="@id/signupFragment"/>
+        <action android:id="@+id/action_memberFragment_to_gameTitle" app:destination="@id/gameTitle"/>
+    </fragment>
+    <fragment android:id="@+id/achievementFragment" android:name="com.example.aries.mygame.AchievementFragment"
+              android:label="fragment_achievement" tools:layout="@layout/fragment_achievement"/>
+    <fragment android:id="@+id/loginFragment" android:name="com.example.aries.mygame.LoginFragment"
+              android:label="fragment_login" tools:layout="@layout/fragment_login">
+        <action android:id="@+id/action_loginFragment_to_gameTitle" app:destination="@id/gameTitle"
+                app:popUpTo="@+id/memberFragment"/>
+    </fragment>
+    <fragment android:id="@+id/signupFragment" android:name="com.example.aries.mygame.SignupFragment"
+              android:label="fragment_signup" tools:layout="@layout/fragment_signup">
+        <action android:id="@+id/action_signupFragment_to_memberFragment" app:destination="@id/memberFragment"
+                app:popUpTo="@+id/memberFragment"/>
+    </fragment>
+    <fragment android:id="@+id/gameOverFragment" android:name="com.example.aries.mygame.GameOverFragment"
+              android:label="GameOverFragment">
+        <action android:id="@+id/action_gameOverFragment_to_gameTitle" app:destination="@id/gameTitle"
+                app:popUpTo="@+id/gameTitle" app:popUpToInclusive="true"/>
+    </fragment>
+    <fragment android:id="@+id/shopFragment" android:name="com.example.aries.mygame.ShopFragment"
+              android:label="ShopFragment">
+        <action android:id="@+id/action_shopFragment_to_gameTitle" app:destination="@id/gameTitle"
+                app:popUpTo="@+id/gameTitle" app:popUpToInclusive="true"/>
+    </fragment>
+    <fragment android:id="@+id/explainFragment" android:name="com.example.aries.mygame.ExplainFragment"
+              android:label="fragment_explain" tools:layout="@layout/fragment_explain"/>
+    <fragment android:id="@+id/explainAchieveFragment" android:name="com.example.aries.mygame.ExplainAchieveFragment"
+              android:label="fragment_explain_achieve" tools:layout="@layout/fragment_explain_achieve"/>
+</navigation>

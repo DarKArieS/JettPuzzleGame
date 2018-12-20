@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="300dp">
+
+        <ImageSwitcher
+                android:layout_width="0dp"
+                android:layout_height="125dp"
+                android:id="@+id/imageSwitcher"
+                app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintVertical_bias="0.3"/>
+        <Button
+                android:text="Prev"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/preButton"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/currentImageTextView"
+                app:layout_constraintHorizontal_bias="0.51"
+                app:layout_constraintTop_toTopOf="@+id/currentImageTextView"/>
+        <Button
+                android:text="Next"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/nextButton"
+                app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toEndOf="@+id/currentImageTextView"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintTop_toTopOf="@+id/currentImageTextView"/>
+        <TextView
+                android:text="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/currentImageTextView" android:textSize="40sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/preButton" app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintEnd_toStartOf="@+id/nextButton" app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.8"/>
+
+
+    </android.support.constraint.ConstraintLayout>
+</layout>

@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+    <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".ShopFragment">
+
+        <!-- TODO: Update blank fragment layout -->
+
+        <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp" app:srcCompat="@drawable/clock"
+                android:id="@+id/itemShopImageView1"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent" app:layout_constraintVertical_bias="0.100000024"
+                app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="0.24"
+                app:layout_constraintEnd_toEndOf="parent"/>
+        <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp" app:srcCompat="@drawable/shield"
+                android:id="@+id/itemShopImageView2"
+                android:layout_marginTop="40dp"
+                app:layout_constraintTop_toBottomOf="@+id/itemShopImageView1"
+                app:layout_constraintStart_toStartOf="@+id/itemShopImageView1"/>
+        <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp" app:srcCompat="@drawable/relic"
+                android:id="@+id/itemShopImageView3"
+                android:layout_marginTop="40dp"
+                app:layout_constraintTop_toBottomOf="@+id/itemShopImageView2"
+                app:layout_constraintStart_toStartOf="@+id/itemShopImageView2"/>
+        <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp" app:srcCompat="@drawable/glasses"
+                android:id="@+id/itemShopImageView4"
+                android:layout_marginTop="40dp"
+                app:layout_constraintTop_toBottomOf="@+id/itemShopImageView3"
+                app:layout_constraintStart_toStartOf="@+id/itemShopImageView3"/>
+        <TextView
+                android:text="神奇鬧鐘：使時間限制延長一倍\n20元"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/itemExplainTextView1" app:layout_constraintStart_toEndOf="@+id/itemShopImageView1"
+                app:layout_constraintTop_toTopOf="@+id/itemShopImageView1"
+                app:layout_constraintBottom_toBottomOf="@+id/itemShopImageView1" android:layout_marginStart="10dp"/>
+        <TextView
+                android:text="識破眼鏡：刪除一個不是答案的選項\n20元"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/itemExplainTextView4" app:layout_constraintStart_toEndOf="@+id/itemShopImageView4"
+                app:layout_constraintTop_toTopOf="@+id/itemShopImageView4"
+                app:layout_constraintBottom_toBottomOf="@+id/itemShopImageView4" android:layout_marginStart="10dp"/>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/itemExplainTextView2"
+                android:text="扣分盾牌：答題錯誤將不會被倒扣分數\n20元" app:layout_constraintStart_toEndOf="@+id/itemShopImageView2"
+                app:layout_constraintTop_toTopOf="@+id/itemShopImageView2"
+                app:layout_constraintBottom_toBottomOf="@+id/itemShopImageView2" android:layout_marginStart="10dp"/>
+        <TextView
+                android:text="加分神器：答題正確獲得兩倍分數\n20元"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/itemExplainTextView3" app:layout_constraintStart_toEndOf="@+id/itemShopImageView3"
+                app:layout_constraintTop_toTopOf="@+id/itemShopImageView3"
+                app:layout_constraintBottom_toBottomOf="@+id/itemShopImageView3" android:layout_marginStart="10dp"/>
+        <EditText
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:ems="10"
+                android:textAlignment="center" android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintEnd_toStartOf="@+id/itemShopImageView1"
+                app:layout_constraintTop_toTopOf="@+id/itemShopImageView1"
+                app:layout_constraintBottom_toBottomOf="@+id/itemShopImageView1" android:hint="0"
+                android:id="@+id/itemNumEditText1" android:maxLength="1"/>
+        <EditText
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/itemNumEditText4" android:textAlignment="center"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintEnd_toStartOf="@+id/itemShopImageView4"
+                app:layout_constraintTop_toTopOf="@+id/itemShopImageView4"
+                app:layout_constraintBottom_toBottomOf="@+id/itemShopImageView4" android:hint="0"
+                android:maxLength="1"/>
+        <EditText
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/itemNumEditText2" android:textAlignment="center"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintEnd_toStartOf="@+id/itemShopImageView2"
+                app:layout_constraintTop_toTopOf="@+id/itemShopImageView2"
+                app:layout_constraintBottom_toBottomOf="@+id/itemShopImageView2" android:hint="0"
+                android:maxLength="1"/>
+        <EditText
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/itemNumEditText3" android:textAlignment="center"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/itemShopImageView3"
+                app:layout_constraintTop_toTopOf="@+id/itemShopImageView3"
+                app:layout_constraintBottom_toBottomOf="@+id/itemShopImageView3" android:hint="0"
+                android:maxLength="1"/>
+        <TextView
+                android:text="需要0元"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/spendTextView" android:textSize="24sp"
+                android:textAlignment="textStart"
+                app:layout_constraintStart_toStartOf="@+id/itemNumEditText4" android:layout_marginBottom="8dp"
+                app:layout_constraintBottom_toTopOf="@+id/balanceTextView"/>
+        <TextView
+                android:text="剩下？元"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/balanceTextView" android:textSize="24sp"
+                android:textAlignment="textStart"
+                app:layout_constraintStart_toStartOf="@+id/spendTextView" app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintVertical_bias="0.95"/>
+        <Button
+                android:text="結帳"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/transactionButton" app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintHorizontal_bias="0.932" app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintVertical_bias="0.948"/>
+        <ProgressBar
+                style="?android:attr/progressBarStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:elevation="2dp"
+                android:id="@+id/shopProgressBar" app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintHorizontal_bias="0.5" app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+                android:visibility="invisible"/>
+    </android.support.constraint.ConstraintLayout>
+</layout>
