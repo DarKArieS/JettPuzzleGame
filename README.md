@@ -47,3 +47,23 @@ Jett有一天發現風景照都缺了一塊！
 	
 - HISTORY
 	查看消費紀錄
+	
+# 遊戲介面
+
+|Target畫面|QUIZ畫面|
+|-----|---------|
+|<img src="ReadMeGIF/Screenshot_20181220-113412.png" width="200px"/>|<img src="ReadMeGIF/Screenshot_20181220-113416.png" width="200px"/>|
+
+- 點擊 QUIZ/TARGET 切換畫面
+
+- QUIZ畫面中點擊PREV/NEXT確認缺失的圖片
+
+- 點選下方的選項，選擇答案
+
+- 點擊ANS，回答問題
+
+- Time: 剩餘時間
+
+- SCORE: 分數
+
+
