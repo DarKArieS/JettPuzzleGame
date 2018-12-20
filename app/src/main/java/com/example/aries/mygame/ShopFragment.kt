@@ -85,7 +85,7 @@ class ShopFragment : Fragment() {
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {}
         })
 
-        val showString = "還有" + ((activity as MainActivity).remainMoney).toString() +  "元"
+        val showString =  ((activity as MainActivity).remainMoney).toString()
         binding.balanceTextView.text = showString
 
         binding.transactionButton.setOnClickListener { view : View ->
@@ -98,12 +98,12 @@ class ShopFragment : Fragment() {
 
     private fun showTotalCost(){
         totalCost = nWantedItem[0]*price[0] + nWantedItem[1]*price[1] + nWantedItem[2]*price[2]+ nWantedItem[3]*price[3]
-        val showString = "需要" + totalCost.toString() +"元"
+        val showString = "-" + totalCost.toString()
         binding.spendTextView.text = showString
     }
 
     private fun showIDNCost(){
-        binding.spendTextView.text = "需要？元"
+        binding.spendTextView.text = "-？"
     }
 
     private fun progressStart(){

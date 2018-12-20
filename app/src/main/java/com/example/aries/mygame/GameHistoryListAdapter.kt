@@ -30,19 +30,20 @@ class GameHistoryListAdapter (val context: Context, val gameHistList: List<GameH
         fun bind(gameHistoryData: GameHistoryData) {
             date?.text = gameHistoryData.date
             balance?.text = gameHistoryData.balance
-            //ToDo add buy item to the history?
-            if(gameHistoryData.game_type == "2"){
-                gameType.setImageResource(R.drawable.sheep_puzzle)
-            }
-            else if(gameHistoryData.game_type == "3"){
-                gameType.setImageResource(R.drawable.sheep_lighton)
-            }
-            else if(gameHistoryData.game_type == "4"){
-                gameType.setImageResource(R.drawable.sheep_left)
-            }else if(gameHistoryData.game_type == "5"){
-                gameType.setImageResource(R.drawable.save_money)
-            }
 
+            when(gameHistoryData.game_type){
+                "2"->{
+                    gameType.setImageResource(R.drawable.sheep_puzzle)
+                    when(gameHistoryData.description){
+                        "購買道具神奇鬧鐘"->gameType.setImageResource(R.drawable.clock)
+                        "購買道具扣分盾牌"->gameType.setImageResource(R.drawable.shield)
+                        "購買道具加分神器"->gameType.setImageResource(R.drawable.relic)
+                        "購買道具識破眼鏡"->gameType.setImageResource(R.drawable.glasses)
+                    }}
+                "3"->gameType.setImageResource(R.drawable.sheep_lighton)
+                "4"->gameType.setImageResource(R.drawable.sheep_left)
+                "5"->gameType.setImageResource(R.drawable.save_money)
+            }
         }
 
     }

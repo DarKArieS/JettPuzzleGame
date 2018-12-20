@@ -29,7 +29,32 @@ class GameFragment : Fragment(),ImageProvider, TimesUp {
     private var firstFragment = TargetImageFragment()
     private val secondFragment = ImageSwitcherFragment()
 
-    private val imagesList : List<Int> = listOf(R.drawable.image_quiz1,R.drawable.image_quiz2)
+    private val imagesList : List<Int> = listOf(
+        R.drawable.image_quiz1,
+        R.drawable.image_quiz2,
+        R.drawable.image_quiz3,
+        R.drawable.image_quiz4,
+        R.drawable.image_quiz5,
+        R.drawable.image_quiz6,
+        R.drawable.image_quiz7,
+        R.drawable.image_quiz8,
+        R.drawable.image_quiz9,
+        R.drawable.image_quiz10,
+        R.drawable.image_quiz11,
+        R.drawable.image_quiz12,
+        R.drawable.image_quiz13,
+        R.drawable.image_quiz14,
+        R.drawable.image_quiz15,
+        R.drawable.image_quiz16,
+        R.drawable.image_quiz17,
+        R.drawable.image_quiz18,
+        R.drawable.image_quiz19,
+        R.drawable.image_quiz20,
+        R.drawable.image_quiz21,
+        R.drawable.image_quiz22,
+        R.drawable.image_quiz23,
+        R.drawable.image_quiz24
+    )
     private var targetImage: Int = 0
 
     private var drawable:Drawable? = null
@@ -148,9 +173,9 @@ class GameFragment : Fragment(),ImageProvider, TimesUp {
         val transaction = childFragmentManager.beginTransaction()
         transaction.replace(R.id.imageFrameLayout, firstFragment).commit()
 
-        timer.threshHold = 30
+        timer.threshHold = 60
         if ((activity as MainActivity).itemChooseArray[0]){
-            timer.threshHold += 30
+            timer.threshHold *=2
         }
         setShowTime()
         timer.startTimer()

@@ -75,7 +75,7 @@ class GameTitle : Fragment() {
             chooseItem(4)
         }
 
-        binding.moneyTextView.text = "剩下" + ((activity as MainActivity).remainMoney).toString() +  "元"
+        binding.moneyTextView.text = ((activity as MainActivity).remainMoney).toString()
         binding.showUserNameTextView.text = (activity as MainActivity).userName
 
         return binding.root
@@ -146,7 +146,7 @@ class GameTitle : Fragment() {
         val gson = Gson()
         val myBodyJson = gson.toJson(myBody)
 
-        println(myBodyJson)
+        //println(myBodyJson)
 
         val client: OkHttpClient = OkHttpClient().newBuilder().build()
         val jSON = MediaType.get("application/json")
@@ -157,8 +157,6 @@ class GameTitle : Fragment() {
             .addHeader("Accept", "application/json")
             .post(requestBody)
             .build()
-
-        //ToDo add a delete request for the used items, need to do it sequentially!
 
         progressStart()
         val call = client.newCall(request)
@@ -190,13 +188,60 @@ class GameTitle : Fragment() {
         val dataJsonArray = JSONObject(readJSON.getString("data"))
         (activity as MainActivity).remainMoney = dataJsonArray.getString("balance").toInt()
         // use item
+        consumingItemProcess()
+
+        Navigation.findNavController(view).navigate(R.id.action_gameTitle_to_gameFragment)
+    }
+
+    private fun consumingItemProcess(){
+
         for (i in 0 .. 3){
             if((activity as MainActivity).itemChooseArray[i]){
-                (activity as MainActivity).itemNumArray[i]--
+                println("consumingItemProcess: consume item:" + i.toString())
+                val myBody = ConsumedItemData("2",i.toString(),(activity as MainActivity).apiToken)
+
+                val gson = Gson()
+                val myBodyJson = gson.toJson(myBody)
+
+                val client: OkHttpClient = OkHttpClient().newBuilder().build()
+                val jSON = MediaType.get("application/json")
+                val requestBody : RequestBody = RequestBody.create(jSON,myBodyJson)
+
+                val request = Request.Builder().url(resources.getString(R.string.URL) +"api/shop")
+                    .addHeader("Content-Type", "application/json")
+                    .addHeader("Accept", "application/json")
+                    .delete(requestBody)
+                    .build()
+
+                val call = client.newCall(request)
+                call.enqueue(object: Callback {
+                    override fun onFailure(call: Call?, e: IOException?) {
+                        (activity as MainActivity).runOnUiThread {
+                            Toast.makeText((activity as MainActivity), "Connecting failed!", Toast.LENGTH_SHORT).show()
+
+                        }
+                    }
+                    override fun onResponse(call: Call?, response: Response?) {
+                        val readJSON = JSONObject(response!!.body()!!.string())
+                        //println(readJSON)
+                        if(readJSON.getString("result") == "success") {
+                            //(activity as MainActivity).runOnUiThread{
+                            // no message is a good message!
+                            //}
+                        }else{
+                            (activity as MainActivity).runOnUiThread {
+                                progressDone()
+                                Toast.makeText((activity as MainActivity), "Consuming Items Failed!", Toast.LENGTH_SHORT).show()
+                            }
+                        }
+                    }
+                })
             }
         }
 
-        Navigation.findNavController(view).navigate(R.id.action_gameTitle_to_gameFragment)
+
+
+
     }
 
     private fun getAchievementProcess(view: View){
@@ -302,6 +347,7 @@ class GameTitle : Fragment() {
 
     private fun getHistorySuccess(view: View, readJSON : JSONObject){
         val dataJsonArray = JSONArray(readJSON.getString("data"))
+        println(dataJsonArray)
         (activity as MainActivity).gameHistoryDataList = mutableListOf()
         for (i in 0 .. (dataJsonArray.length()-1)){
             val dataJsonObject =  JSONObject(dataJsonArray[i].toString())
@@ -309,8 +355,9 @@ class GameTitle : Fragment() {
             val gameID = dataJsonObject.getString("game_id")
             val balance = dataJsonObject.getString("amount")
             val date = dataJsonObject.getString("updated_at")
+            val description = dataJsonObject.getString("description")
 
-            val gameHistoryData = GameHistoryData(gameID,date,balance)
+            val gameHistoryData = GameHistoryData(gameID,date,balance,description)
             (activity as MainActivity).gameHistoryDataList.add(gameHistoryData)
         }
         (activity as MainActivity).gameHistoryDataList//.reverse()

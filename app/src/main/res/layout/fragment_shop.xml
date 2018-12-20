@@ -56,7 +56,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/itemExplainTextView2"
-                android:text="扣分盾牌：答題錯誤將不會被倒扣分數\n20元" app:layout_constraintStart_toEndOf="@+id/itemShopImageView2"
+                android:text="扣分盾牌：答題錯誤不會被倒扣分數\n20元" app:layout_constraintStart_toEndOf="@+id/itemShopImageView2"
                 app:layout_constraintTop_toTopOf="@+id/itemShopImageView2"
                 app:layout_constraintBottom_toBottomOf="@+id/itemShopImageView2" android:layout_marginStart="10dp"/>
         <TextView
@@ -114,15 +114,16 @@
                 app:layout_constraintBottom_toBottomOf="@+id/itemShopImageView3" android:hint="0"
                 android:maxLength="1"/>
         <TextView
-                android:text="需要0元"
+                android:text="- 0"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/spendTextView" android:textSize="24sp"
                 android:textAlignment="textStart"
                 app:layout_constraintStart_toStartOf="@+id/itemNumEditText4" android:layout_marginBottom="8dp"
-                app:layout_constraintBottom_toTopOf="@+id/balanceTextView"/>
+                app:layout_constraintBottom_toTopOf="@+id/balanceTextView"
+                android:textColor="@android:color/holo_red_dark"/>
         <TextView
-                android:text="剩下？元"
+                android:text="？"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/balanceTextView" android:textSize="24sp"
@@ -146,5 +147,21 @@
                 app:layout_constraintHorizontal_bias="0.5" app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
                 android:visibility="invisible"/>
+        <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp" app:srcCompat="@drawable/coin"
+                android:id="@+id/coinImageView4"
+                app:layout_constraintStart_toEndOf="@+id/balanceTextView"
+                android:layout_marginStart="8dp"
+                app:layout_constraintTop_toTopOf="@+id/balanceTextView"
+                app:layout_constraintBottom_toBottomOf="@+id/balanceTextView"/>
+        <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp" app:srcCompat="@drawable/coin"
+                android:id="@+id/coinImageView5"
+                app:layout_constraintStart_toEndOf="@+id/spendTextView"
+                android:layout_marginStart="8dp"
+                app:layout_constraintTop_toTopOf="@+id/spendTextView"
+                app:layout_constraintBottom_toBottomOf="@+id/spendTextView"/>
     </android.support.constraint.ConstraintLayout>
 </layout>
